@@ -10,9 +10,17 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./not-logged/not-logged.module').then(m => m.NotLoggedModule)
-      }
-    ]
+        loadChildren: () =>
+          import('./not-logged/not-logged.module').then(
+            (m) => m.NotLoggedModule
+          ),
+      },
+      {
+        path: '/auth',
+        loadChildren: () =>
+          import('./auth/auth.module').then((m) => m.AuthModule),
+      },
+    ],
   },
 ];
 
@@ -20,4 +28,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class FeaturesRoutingModule { }
+export class FeaturesRoutingModule {}
