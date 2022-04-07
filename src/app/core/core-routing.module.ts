@@ -10,10 +10,10 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)
-      
-      }
-    ]
+        loadChildren: () =>
+          import('./features/features.module').then((m) => m.FeaturesModule),
+      },
+    ],
   },
 ];
 
@@ -21,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CoreRoutingModule { }
+export class CoreRoutingModule {}
