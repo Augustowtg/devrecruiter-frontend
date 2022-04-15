@@ -7,13 +7,7 @@ import { NotLoggedComponent } from './not-logged.component';
 const routes: Routes = [
   {
     path: '',
-    component: NotLoggedComponent,
-    children: [
-      {
-        path: '',
-        component: LandingPageComponent
-      }
-    ]
+    component: NotLoggedComponent
   },
 ];
 
