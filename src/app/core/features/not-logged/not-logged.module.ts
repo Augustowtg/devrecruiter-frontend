@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbLayoutModule } from '@nebular/theme';
 import { NebularImportsModule } from 'src/app/shared/nebular/nebular-imports/nebular-imports.module';
 
@@ -16,7 +17,8 @@ import { NotLoggedComponent } from './not-logged.component';
     CommonModule,
     NotLoggedRoutingModule,
     RouterModule,
-    NbLayoutModule
+    NbLayoutModule,
+    NbEvaIconsModule
   ]
 })
 export class NotLoggedModule { }
