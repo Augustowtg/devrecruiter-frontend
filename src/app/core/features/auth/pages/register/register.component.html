@@ -1,1 +1,61 @@
-<p>register works!</p>
+<nb-layout>
+  <nb-layout-column class="d-flex align-items-center">
+    <nb-card>
+      <nb-card-body>
+        <section class="row d-flex justify-content-center">
+          <h1 class="text-center mb-5 mt-3">Cadastrar-se</h1>
+
+          <section>
+            <input
+              type="text"
+              nbInput
+              class="col-12"
+              fieldSize="large"
+              shape="rectangle"
+              placeholder="Nome completo"
+            />
+
+            <input
+              type="text"
+              nbInput
+              class="col-12 mt-3"
+              fieldSize="large"
+              shape="rectangle"
+              placeholder="E-mail"
+            />
+
+            <input
+              type="text"
+              nbInput
+              class="col-12 mt-3"
+              fieldSize="large"
+              shape="rectangle"
+              placeholder="Senha"
+            />
+
+            <input
+              type="text"
+              nbInput
+              class="col-12 mt-3"
+              fieldSize="large"
+              shape="rectangle"
+              placeholder="Confirme sua senha"
+            />
+          </section>
+
+          <section class="d-flex justify-content-center mt-3">
+            <button nbButton size="medium" status="primary">
+              Cadastrar-se
+            </button>
+          </section>
+
+          <section class="mt-5 text-center">
+            <a class="text-decoration-none" [routerLink]="['#']"
+              >Já possui cadastro? Clique aqui.</a
+            >
+          </section>
+        </section>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>
