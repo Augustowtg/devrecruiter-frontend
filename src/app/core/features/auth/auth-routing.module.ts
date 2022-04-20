@@ -12,10 +12,10 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'login',
+        redirectTo: 'signin',
       },
       {
-        path: 'login',
+        path: 'signin',
         component: LoginComponent,
       },
       {
