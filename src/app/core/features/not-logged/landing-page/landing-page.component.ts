@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-
+  allitems = [{title: 'sobre'}, {title: 'entrar'}, {title: 'registrar'}];
   constructor() { }
 
   ngOnInit(): void {

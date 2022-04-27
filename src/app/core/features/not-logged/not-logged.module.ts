@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { NbLayoutModule } from '@nebular/theme';
+import { NbActionsModule, NbButtonModule, NbContextMenuModule, NbIconModule, NbLayoutModule } from '@nebular/theme';
 import { NebularImportsModule } from 'src/app/shared/nebular/nebular-imports/nebular-imports.module';
 
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -18,7 +17,10 @@ import { NotLoggedComponent } from './not-logged.component';
     NotLoggedRoutingModule,
     RouterModule,
     NbLayoutModule,
-    NbEvaIconsModule
+    NbIconModule,
+    NbButtonModule,
+    NbContextMenuModule,
+    NbActionsModule
   ]
 })
 export class NotLoggedModule { }
