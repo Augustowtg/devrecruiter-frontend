@@ -1,22 +1,22 @@
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { NbButtonModule, NbCardModule, NbCheckboxModule, NbInputModule, NbLayoutModule } from '@nebular/theme';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './pages/login/login.component';
+import { RecoverPasswordComponent } from './pages/recover-password/recover-password.component';
 import { RegisterComponent } from './pages/register/register.component';
-import {
-  NbButtonModule,
-  NbCardModule,
-  NbCheckboxModule,
-  NbInputModule,
-  NbLayoutModule,
-} from '@nebular/theme';
 
 @NgModule({
-  declarations: [AuthComponent, LoginComponent, RegisterComponent],
+  declarations: [
+    AuthComponent,
+    LoginComponent,
+    RegisterComponent,
+    RecoverPasswordComponent,
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -26,7 +26,7 @@ import {
     NbButtonModule,
     NbCheckboxModule,
     NbLayoutModule,
-    NbCardModule
+    NbCardModule,
   ],
 })
 export class AuthModule {}
