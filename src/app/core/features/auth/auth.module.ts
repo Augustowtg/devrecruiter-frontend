@@ -1,8 +1,9 @@
+import { SharedModule } from './../../../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { NbButtonModule, NbCardModule, NbCheckboxModule, NbInputModule, NbLayoutModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbCheckboxModule, NbDialogModule, NbInputModule, NbLayoutModule } from '@nebular/theme';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
@@ -18,6 +19,7 @@ import { RegisterComponent } from './pages/register/register.component';
     RecoverPasswordComponent,
   ],
   imports: [
+    SharedModule,
     CommonModule,
     AuthRoutingModule,
     RouterModule,
@@ -27,6 +29,7 @@ import { RegisterComponent } from './pages/register/register.component';
     NbCheckboxModule,
     NbLayoutModule,
     NbCardModule,
+    NbDialogModule.forChild(),
   ],
 })
 export class AuthModule {}

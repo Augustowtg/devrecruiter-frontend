@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbMenuModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbMenuModule, NbDialogModule } from '@nebular/theme';
 import { RouterModule } from '@angular/router';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
@@ -23,6 +23,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbEvaIconsModule,
     RouterModule,
     NbMenuModule.forRoot(),
+    NbDialogModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
