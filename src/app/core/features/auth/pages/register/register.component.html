@@ -1,11 +1,11 @@
-<nb-layout>
+<nb-layout center>
   <nb-layout-column class="d-flex align-items-center">
     <nb-card>
       <nb-card-body>
         <section class="row d-flex justify-content-center">
           <h1 class="text-center mb-5 mt-3">Cadastrar-se</h1>
           <form>
-            <section>
+            <section class="text-center">
               <input
                 type="text"
                 nbInput
@@ -51,7 +51,7 @@
           </form>
 
           <section class="mt-5 text-center">
-            <a class="text-secondary text-decoration-none" [routerLink]="['#']"
+            <a class="text-secondary text-decoration-none" [routerLink]="['/auth/signin']"
               >Já possui cadastro? Clique aqui.</a
             >
           </section>
