@@ -9,10 +9,14 @@ const routes: Routes = [
     component: FeaturesComponent,
     children: [
       {
-        path: 'auth',
-        loadChildren: () =>
-          import('./auth/auth.module').then((m) => m.AuthModule),
+        path: '',
+        loadChildren: () => import('./not-logged/not-logged.module').then((m) => m.NotLoggedModule),
       },
+      
+      {
+        path: 'estudante',
+        loadChildren: () => import('./student/student.module').then(m => m.StudentModule)
+      }
     ],
   },
 ];
@@ -21,4 +25,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class FeaturesRoutingModule {}
+export class FeaturesRoutingModule { }

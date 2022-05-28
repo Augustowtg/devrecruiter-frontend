@@ -13,14 +13,14 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'signin',
+        redirectTo: 'login',
       },
       {
-        path: 'signin',
+        path: 'login',
         component: LoginComponent,
       },
       {
-        path: 'signup',
+        path: 'register',
         component: RegisterComponent,
       },
       {
