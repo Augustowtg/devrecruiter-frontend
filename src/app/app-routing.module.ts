@@ -9,15 +9,25 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)
+      },
+    ]
+  },
+  {
+    path: '',
+    component: AppComponent,
+    children: [
+      {
+        path: '',
         loadChildren: () => import('./core/core.module').then(m => m.CoreModule)
       }
     ]
-  }
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),  
+    RouterModule.forRoot(routes),
   ],
   exports: [RouterModule]
 })
