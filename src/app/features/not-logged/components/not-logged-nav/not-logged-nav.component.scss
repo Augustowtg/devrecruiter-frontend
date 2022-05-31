@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+}
+a p {
+    text-decoration: none;
+    color: #0071BD;
+}
+.button-responsive {
+    display: none
+}
+
+@media (max-width: 573px) {
+    .button-responsive {
+        display: inline-block
+    }
+
+    .menu-responsive {
+        display: none
+    }
+}
