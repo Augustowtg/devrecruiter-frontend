@@ -1,0 +1,120 @@
+<section class="container">
+  <mat-card>
+    <mat-card-content>
+      <mat-card-header class="d-flex justify-content-center my-5">
+        <mat-card-title>Cadastrar-se</mat-card-title>
+      </mat-card-header>
+
+      <form [formGroup]="registerUserForm" (ngSubmit)="registerUser()">
+        <section class="row flex-row text-center">
+          <mat-form-field appearance="legacy">
+            <mat-label>Nome Completo</mat-label>
+            <input
+              matInput
+              type="text"
+              class="col-12"
+              placeholder="Nome completo"
+              formControlName="name"
+            />
+            <section
+              *ngIf="
+                submitted ||
+                (registerFormControls.name.touched &&
+                  registerFormControls.name.errors)
+              "
+              class="text-danger"
+            >
+              <section *ngIf="registerFormControls.name.errors?.required">
+                Campo obrigatório!
+              </section>
+            </section>
+          </mat-form-field>
+
+          <mat-form-field appearance="legacy">
+            <mat-label>E-mail</mat-label>
+            <input
+              matInput
+              type="text"
+              class="col-12"
+              placeholder="E-mail"
+              formControlName="email"
+            />
+            <section
+              *ngIf="
+                submitted ||
+                (registerFormControls.email.touched &&
+                  registerFormControls.email.errors)
+              "
+              class="text-danger"
+            >
+              <section *ngIf="registerFormControls.email.errors?.required">
+                Campo obrigatório!
+              </section>
+            </section>
+          </mat-form-field>
+
+          <mat-form-field appearance="legacy">
+            <mat-label>Senha</mat-label>
+            <input
+              matInput
+              type="password"
+              class="col-12"
+              placeholder="Senha"
+              formControlName="password"
+            />
+            <section
+              *ngIf="
+                submitted ||
+                (registerFormControls.password.touched &&
+                  registerFormControls.password.errors)
+              "
+              class="text-danger"
+            >
+              <section *ngIf="registerFormControls.password.errors?.required">
+                Campo obrigatório!
+              </section>
+            </section>
+          </mat-form-field>
+
+          <mat-form-field appearance="legacy">
+            <mat-label>Confirme sua senha</mat-label>
+            <input
+              matInput
+              type="password"
+              class="col-12"
+              placeholder="Confirme sua senha"
+              formControlName="password2"
+              [ngClass]="{
+                'is-invalid': submitted && registerFormControls.password?.errors
+              }"
+            />
+            <section
+              *ngIf="
+                submitted ||
+                (registerFormControls.password.touched &&
+                  registerFormControls.password.errors)
+              "
+              class="text-danger"
+            >
+              <section *ngIf="registerFormControls.password.errors?.required">
+                Campo obrigatório!
+              </section>
+            </section>
+          </mat-form-field>
+        </section>
+
+        <section class="d-flex justify-content-center mt-3">
+          <button mat-raised-button color="primary" [disabled]="submitted || registerUserForm.invalid">Cadastrar-se</button>
+        </section>
+      </form>
+
+      <section class="mt-5 text-center">
+        <a
+          class="text-secondary text-decoration-none"
+          [routerLink]="['/auth/login']"
+          >Já possui cadastro? Clique aqui.</a
+        >
+      </section>
+    </mat-card-content>
+  </mat-card>
+</section>
