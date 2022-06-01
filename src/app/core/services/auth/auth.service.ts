@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import * as moment from 'moment';
 
 import { IUserResponseLogin } from './../../../features/auth/models/user-login/user-response-login.model';
 
