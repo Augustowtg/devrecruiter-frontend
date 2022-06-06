@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
 
 import { NotloggedFooterComponent } from './components/notlogged-footer/notlogged-footer.component';
