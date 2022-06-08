@@ -1,14 +1,16 @@
 a {
     text-decoration: none;
 }
-a p {
+a {
     text-decoration: none;
-    color: #0071BD;
+    color: white;
 }
 .button-responsive {
     display: none
 }
-
+mat-toolbar {
+    background-color: #0071BD;
+}
 @media (max-width: 573px) {
     .button-responsive {
         display: inline-block

@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { INavMenu } from '../../models/INavMenu';
 
 @Component({
   selector: 'app-not-logged-nav',
   templateUrl: './not-logged-nav.component.html',
   styleUrls: ['./not-logged-nav.component.scss']
 })
-export class NotLoggedNavComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class NotLoggedNavComponent {
+  menuItems: INavMenu[] = [
+    {
+      label: 'estudante',
+      href: './student'
+    },
+    {
+      label: 'Entrar',
+      href: './auth/login'
+    },
+    {
+      label: 'registrar',
+      href: './auth/register'
+    }
+  ];
 }
