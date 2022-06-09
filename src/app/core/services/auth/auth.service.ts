@@ -30,16 +30,17 @@ export class AuthService {
   }
 
   public  isRecruiter(): boolean { 
-    const role: boolean = Boolean(localStorage.getItem('Role'));
-    if(role === true) {
+    const role = localStorage.getItem('Role');
+    if(role === 'true') {
       return true
     }
     return false
   }
 
   public  isStudent(): boolean { 
-    const role: boolean = Boolean(localStorage.getItem('Role'));
-    if(role === false) {
+    let role = localStorage.getItem('Role');
+    if(role === 'false') {
+      console.log('Student guard true')
       return true
     }
     return false

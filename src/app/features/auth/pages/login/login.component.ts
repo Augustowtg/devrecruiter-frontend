@@ -52,7 +52,7 @@ export class LoginComponent {
       (response: IUserResponseLogin) => {
         console.log('Response login: ' + response);
 
-        this.router.navigate(['/authenticated/student']);
+        this.router.navigate(['/recruiter']);
       },
       (err) => {
         console.log('Error login session: ' + err);

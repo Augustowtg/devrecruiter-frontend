@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivateChild, Router, UrlTree } from '@angular/router';
+import { CanActivate, Router, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { AuthService } from '../../services/auth/auth.service';
@@ -7,16 +7,17 @@ import { AuthService } from '../../services/auth/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class RecruiterGuard implements CanActivateChild {
+export class RecruiterGuard implements CanActivate {
 
   constructor(
     private authService: AuthService,
     private router: Router
   ) { }
 
-  canActivateChild(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+  canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const logged: boolean = this.authService.isRecruiter();
     if(logged === true) {
+      console.log('É recrutador')
       return true
     }
     return this.router.navigate(['/student']);

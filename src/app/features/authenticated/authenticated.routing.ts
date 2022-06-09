@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from 'src/app/core/guards/auth/auth.guard';
+import { RecruiterGuard } from 'src/app/core/guards/recruiter/recruiter.guard';
+import { StudentGuard } from 'src/app/core/guards/student/student.guard';
 
 import { AuthenticatedComponent } from './authenticated.component';
 
 const routes: Routes = [
   {
     path: '',
+    canActivateChild: [AuthGuard],
     component: AuthenticatedComponent,
     children: [
-      {
-        path:'teste',
-        component: AuthenticatedComponent
-      },
       {
         path: '',
         loadChildren: () =>
@@ -19,11 +19,13 @@ const routes: Routes = [
       },
       {
         path: 'student',
+        canActivate: [StudentGuard],
         loadChildren: () =>
           import('../student/student.module').then((m) => m.StudentModule),
       },
       {
         path: 'recruiter',
+        canActivate: [RecruiterGuard],
         loadChildren: () =>
           import('../recruiter/recruiter.module').then(
             (m) => m.RecruiterModule
