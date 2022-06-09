@@ -10,9 +10,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-import { FooterStudentComponent } from './layouts/footer-student/footer-student.component';
-import { HeaderStudentComponent } from './layouts/header-student/header-student.component';
-import { NavbarStudentComponent } from './layouts/navbar-student/navbar-student.component';
 import { StudentEditVitaeComponent } from './pages/student-edit-vitae/student-edit-vitae.component';
 import { StudentHomeComponent } from './pages/student-home/student-home.component';
 import { StudentRegisterVitaeComponent } from './pages/student-register-vitae/student-register-vitae.component';
@@ -27,9 +24,6 @@ import { StudentRoutingModule } from './student.routing';
     StudentEditVitaeComponent,
     StudentVitaeComponent,
     StudentRegisterVitaeComponent,
-    NavbarStudentComponent,
-    FooterStudentComponent,
-    HeaderStudentComponent
   ],
   imports: [
     CommonModule,

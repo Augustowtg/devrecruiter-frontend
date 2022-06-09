@@ -16,7 +16,6 @@ export class StudentGuard implements CanActivate {
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const logged: boolean = this.authService.isStudent();
     if(logged === true) {
-      console.log('É aluno')
       return true
     }
     return this.router.navigate(['/recruiter']);

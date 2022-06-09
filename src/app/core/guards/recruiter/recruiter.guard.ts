@@ -17,7 +17,6 @@ export class RecruiterGuard implements CanActivate {
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const logged: boolean = this.authService.isRecruiter();
     if(logged === true) {
-      console.log('É recrutador')
       return true
     }
     return this.router.navigate(['/student']);

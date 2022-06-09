@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 @Component({
   selector: 'app-authenticated',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthenticatedComponent implements OnInit {
 
-  constructor() { }
+  role = '';
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
+    const roles = this.authService.isStudent();
+    if(roles === false) {
+      this.role = 'Recruiter'
+    }
+    this.role = 'Student'
   }
 
 }

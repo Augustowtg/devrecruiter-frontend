@@ -1,18 +1,11 @@
 <mat-drawer-container class="example-container">
     <mat-drawer class="side-bar" mode="side" [opened]="true">
-        <ul>
-            <li>Perfil</li>
-            <li>Vagas</li>
-            <li>Vagas</li>
-            <li>Vagas</li>
-            <li>Vagas</li>
-            <li>Vagas</li>
-            <li>Vagas</li>
-        </ul>
+        <app-sidebar-internal [role]="role" ></app-sidebar-internal>
     </mat-drawer>
     <mat-drawer-content>
         <div class="container">
-            <app-navbar-internal></app-navbar-internal>
+            <app-navbar-internal [role]="role" ></app-navbar-internal>
+            <router-outlet></router-outlet>
             <app-footer-internal></app-footer-internal>
         </div>
     </mat-drawer-content>

@@ -40,7 +40,6 @@ export class AuthService {
   public  isStudent(): boolean { 
     let role = localStorage.getItem('Role');
     if(role === 'false') {
-      console.log('Student guard true')
       return true
     }
     return false
