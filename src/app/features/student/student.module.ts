@@ -6,6 +6,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -42,6 +43,7 @@ import { StudentRoutingModule } from './student.routing';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    MatToolbarModule
   ]
 })
 export class StudentModule { }

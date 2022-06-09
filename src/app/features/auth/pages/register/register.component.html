@@ -7,6 +7,16 @@
 
       <form [formGroup]="registerUserForm" (ngSubmit)="registerUser()">
         <section class="row flex-row text-center">
+          <mat-form-field  appearance="fill">
+
+            <mat-label>Função</mat-label>
+            <mat-select formControlName="isAdmin">
+              <mat-option  *ngFor="let role of roles" [value]="role.value">
+                {{role.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
           <mat-form-field appearance="legacy">
             <mat-label>Nome Completo</mat-label>
             <input

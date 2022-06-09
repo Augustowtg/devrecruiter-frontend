@@ -11,12 +11,17 @@ import { IUserRegister } from './../../models/user-register/user-register.model'
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
+  roles: any[] = [
+    {
+      viewValue: 'Recrutador',
+      value: true
+    },
+    {
+      viewValue: 'Aluno',
+      value: false
+    },
+  ]
   public submitted = false;
-  public typedRegisterUserForm: IUserRegister = {
-    name: '',
-    email: '',
-    password: '',
-  };
 
   public registerUserForm = this.formbuilder.group(
     {
@@ -31,6 +36,7 @@ export class RegisterComponent {
       ],
       password: [null, [Validators.required]],
       password2: [null, [Validators.required]],
+      isAdmin: [null]
     },
     {
       validator: this.validatePassword('password', 'password2'),
@@ -67,14 +73,16 @@ export class RegisterComponent {
       return;
     }
 
-    this.typedRegisterUserForm = {
+    const typedRegisterUserForm: IUserRegister = {
       name: this.registerUserForm.get('name')?.value,
       email: this.registerUserForm.get('email')?.value,
       password: this.registerUserForm.get('password')?.value,
+      isAdmin: this.registerUserForm.get('isAdmin')?.value,
     };
+    console.log(typedRegisterUserForm.isAdmin )
     let userRegisterId: any = 0;
 
-    this.registerService.registerUser(this.typedRegisterUserForm).subscribe(
+    this.registerService.registerUser(typedRegisterUserForm).subscribe(
       (responseRegisterUser: any) => {
         userRegisterId = responseRegisterUser.id;
 
