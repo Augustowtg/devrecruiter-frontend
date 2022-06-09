@@ -6,7 +6,6 @@ import { IUserResponseLogin } from './../../../features/auth/models/user-login/u
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
 
   // Função para remover credenciais do usuário deslogado
   public logoutUser(): void {
@@ -21,7 +20,7 @@ export class AuthService {
       return true;
     } else {
       this.logoutUser();
-      return false;
+      return false
     }
   }
 
