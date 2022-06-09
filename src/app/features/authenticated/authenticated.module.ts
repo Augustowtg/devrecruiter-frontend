@@ -4,6 +4,7 @@ import { AuthenticatedComponent } from './authenticated.component';
 import { AuthenticatedRoutingModule } from './authenticated.routing';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ImaterialModule } from 'src/app/shared/modules/imaterial/imaterial.module';
 
 
 @NgModule({
@@ -13,8 +14,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     AuthenticatedRoutingModule,
-    MatSidenavModule,
-    SharedModule
+    SharedModule,
+    ImaterialModule,
   ]
 })
 export class AuthenticatedModule { }

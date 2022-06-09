@@ -1,15 +1,19 @@
-<!-- <app-navbar-internal></app-navbar-internal>
 <mat-drawer-container class="example-container">
-    <mat-drawer class="side-bar" mode="side" opened>
+    <mat-drawer class="side-bar" mode="side" [opened]="true">
         <ul>
             <li>Perfil</li>
             <li>Vagas</li>
+            <li>Vagas</li>
+            <li>Vagas</li>
+            <li>Vagas</li>
+            <li>Vagas</li>
+            <li>Vagas</li>
         </ul>
     </mat-drawer>
-    <mat-drawer-content class="p-3">
-        <router-outlet></router-outlet>
+    <mat-drawer-content>
+        <div class="container">
+            <app-navbar-internal></app-navbar-internal>
+            <app-footer-internal></app-footer-internal>
+        </div>
     </mat-drawer-content>
 </mat-drawer-container>
-<app-footer-internal></app-footer-internal> -->
-
-<router-outlet></router-outlet>

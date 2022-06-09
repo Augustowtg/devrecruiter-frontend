@@ -9,6 +9,10 @@ const routes: Routes = [
     component: AuthenticatedComponent,
     children: [
       {
+        path:'teste',
+        component: AuthenticatedComponent
+      },
+      {
         path: '',
         loadChildren: () =>
           import('../user/user.module').then((m) => m.UserModule),

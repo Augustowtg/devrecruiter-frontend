@@ -14,6 +14,7 @@ export class AuthService {
     localStorage.removeItem('userId');
   }
 
+
   // Função para verificar se o usuário está logado
   public isUserLogged(): boolean {
     if (localStorage.getItem('Authorization')) {
@@ -26,5 +27,22 @@ export class AuthService {
 
   public userSession(session: IUserResponseLogin): void {
     localStorage.setItem('Authorization', `${session.token}`);
+    localStorage.setItem('Role', `${session.role}`);
+  }
+
+  public  isRecruiter(): boolean { 
+    const role: boolean = Boolean(localStorage.getItem('Role'));
+    if(role === true) {
+      return true
+    }
+    return false
+  }
+
+  public  isStudent(): boolean { 
+    const role: boolean = Boolean(localStorage.getItem('Role'));
+    if(role === false) {
+      return true
+    }
+    return false
   }
 }

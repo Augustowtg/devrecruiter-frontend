@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarInternalComponent implements OnInit {
 
+  role: any = localStorage.getItem("ROLE")
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.role)
   }
 
 }
