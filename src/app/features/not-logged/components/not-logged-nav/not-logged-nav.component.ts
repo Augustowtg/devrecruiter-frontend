@@ -9,10 +9,6 @@ import { INavMenu } from '../../models/INavMenu';
 export class NotLoggedNavComponent {
   menuItems: INavMenu[] = [
     {
-      label: 'estudante',
-      href: './student'
-    },
-    {
       label: 'Entrar',
       href: './auth/login'
     },

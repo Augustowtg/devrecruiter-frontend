@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { IUserResponseLogin } from './../../../features/auth/models/user-login/user-response-login.model';
 
@@ -6,6 +7,10 @@ import { IUserResponseLogin } from './../../../features/auth/models/user-login/u
   providedIn: 'root',
 })
 export class AuthService {
+
+  constructor(
+    private router: Router
+  ) { }
 
   // Função para remover credenciais do usuário deslogado
   public logoutUser(): void {
@@ -27,6 +32,12 @@ export class AuthService {
   public userSession(session: IUserResponseLogin): void {
     localStorage.setItem('Authorization', `${session.token}`);
     localStorage.setItem('Role', `${session.role}`);
+    let role: string | null = localStorage.getItem('Role');
+
+    if(role === 'true') {
+      this.router.navigate(['student'])
+    }
+    this.router.navigate(['recruiter'])
   }
 
   public  isRecruiter(): boolean { 

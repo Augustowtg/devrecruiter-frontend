@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 import { IUserLogin } from '../../models/user-login/user-login.model';
 import { LoginService } from '../../services/login/login.service';
@@ -29,7 +30,7 @@ export class LoginComponent {
   constructor(
     private formbuilder: FormBuilder,
     private loginService: LoginService,
-    private router: Router
+    private authService: AuthService
   ) {}
 
   get loginFormControls(): any {
@@ -50,9 +51,7 @@ export class LoginComponent {
 
     this.loginService.loginUser(userForm).subscribe(
       (response: IUserResponseLogin) => {
-        console.log('Response login: ' + response);
-
-        this.router.navigate(['/recruiter']);
+        this.authService.userSession(response);
       },
       (err) => {
         console.log('Error login session: ' + err);
