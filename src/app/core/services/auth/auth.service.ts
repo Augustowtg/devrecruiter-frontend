@@ -16,6 +16,7 @@ export class AuthService {
   public logoutUser(): void {
     localStorage.removeItem('Authorization');
     localStorage.removeItem('userId');
+    localStorage.removeItem('Role');
   }
 
 

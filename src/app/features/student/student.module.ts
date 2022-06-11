@@ -10,10 +10,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-import { StudentEditVitaeComponent } from './pages/student-edit-vitae/student-edit-vitae.component';
+import { StudentEditResumeComponent } from './pages/student-edit-resume/student-edit-resume.component';
 import { StudentHomeComponent } from './pages/student-home/student-home.component';
-import { StudentRegisterVitaeComponent } from './pages/student-register-vitae/student-register-vitae.component';
-import { StudentVitaeComponent } from './pages/student-vitae/student-vitae.component';
+import { StudentRegisterResumeComponent } from './pages/student-register-resume/student-register-resume.component';
+import { StudentResumeComponent } from './pages/student-resume/student-resume.component';
 import { StudentComponent } from './student.component';
 import { StudentRoutingModule } from './student.routing';
 
@@ -21,9 +21,9 @@ import { StudentRoutingModule } from './student.routing';
   declarations: [
     StudentComponent,
     StudentHomeComponent,
-    StudentEditVitaeComponent,
-    StudentVitaeComponent,
-    StudentRegisterVitaeComponent,
+    StudentEditResumeComponent,
+    StudentResumeComponent,
+    StudentRegisterResumeComponent,
   ],
   imports: [
     CommonModule,

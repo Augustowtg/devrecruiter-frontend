@@ -9,7 +9,7 @@ import { RecruiterComponent } from './recruiter.component';
 import { RecruiterRoutingModule } from './recruiter.routing';
 import { RecruiterRegisterJobComponent } from './pages/recruiter-register-job/recruiter-register-job.component';
 import { RecruiterListJobComponent } from './pages/recruiter-list-job/recruiter-list-job.component';
-import { RecruiterListVitaeComponent } from './pages/recruiter-list-vitae/recruiter-list-vitae.component';
+import { RecruiterListResumeComponent } from './pages/recruiter-list-resume/recruiter-list-resume.component';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { RecruiterListVitaeComponent } from './pages/recruiter-list-vitae/recrui
     RecruiterHomeComponent,
     RecruiterRegisterJobComponent,
     RecruiterListJobComponent,
-    RecruiterListVitaeComponent
+    RecruiterListResumeComponent
   ],
   imports: [
     CommonModule,

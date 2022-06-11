@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { StudentEditVitaeComponent } from './pages/student-edit-vitae/student-edit-vitae.component';
+import { StudentEditResumeComponent } from './pages/student-edit-resume/student-edit-resume.component';
 import { StudentHomeComponent } from './pages/student-home/student-home.component';
-import { StudentRegisterVitaeComponent } from './pages/student-register-vitae/student-register-vitae.component';
-import { StudentVitaeComponent } from './pages/student-vitae/student-vitae.component';
+import { StudentRegisterResumeComponent } from './pages/student-register-resume/student-register-resume.component';
+import { StudentResumeComponent } from './pages/student-resume/student-resume.component';
 import { StudentComponent } from './student.component';
 
 const routes: Routes = [
@@ -18,15 +18,15 @@ const routes: Routes = [
       },
       {
         path: 'curriculum-register',
-        component: StudentRegisterVitaeComponent
+        component: StudentRegisterResumeComponent
       },
       {
         path: 'curriculum',
-        component: StudentVitaeComponent
+        component: StudentResumeComponent
       },
       {
         path: 'curriculum-edit',
-        component: StudentEditVitaeComponent
+        component: StudentEditResumeComponent
       },
     ]
   }

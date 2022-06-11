@@ -22,9 +22,7 @@ export class LoginService {
       userLogin
     ).pipe(
       take(1),
-      tap((response: IUserResponseLogin) => {
-        return<IUserResponseLogin> response
-      })
+      tap((response: IUserResponseLogin) => response)
     );
   }
 }

@@ -1,0 +1,43 @@
+<section>
+    <div>
+        <h2>Curriculo: </h2>
+    </div>
+
+    <section>
+        <div class="d-flex justify-content-center">
+            <form class="d-flex flex-column" [formGroup]="resumeForm">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Nome do curriculo</mat-label>
+                    <input matInput type="text" class="col-12" placeholder="Nome do curriculo" />
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Nome no curriculo</mat-label>
+                    <input formControlName="name" matInput type="text" class="col-12" placeholder="Descrição" />
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Descrição</mat-label>
+                    <input formControlName="description" matInput type="text" class="col-12" placeholder="Descrição" />
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <mat-label>SoftSkill</mat-label>
+                    <input formControlName="SoftSkill" matInput type="password" class="col-12"
+                        placeholder="Caracteristica" />
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <mat-label>HardSkill</mat-label>
+                    <input formControlName="HardSkill" matInput type="password" class="col-12"
+                        placeholder="Habilidades" />
+                </mat-form-field>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Contato</mat-label>
+                    <input formControlName="contact" matInput type="password" class="col-12"
+                        placeholder="Habilidades" />
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="onSubmit()"
+                    [disabled]="resumeForm.invalid">
+                    Entrar
+                </button>
+            </form>
+        </div>
+    </section>
+</section>
