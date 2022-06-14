@@ -4,6 +4,7 @@ import { NavbarInternalComponent } from './components/navbar-internal/navbar-int
 import { FooterInternalComponent } from './components/footer-internal/footer-internal.component';
 import { ImaterialModule } from './modules/imaterial/imaterial.module';
 import { SidebarInternalComponent } from './components/sidebar-internal/sidebar-internal.component';
+import { RouterModule } from '@angular/router';
 
 
 const sharedExportDeclarations = [
@@ -18,7 +19,8 @@ const sharedExportDeclarations = [
   ],
   imports: [
     CommonModule,
-    ImaterialModule
+    ImaterialModule,
+    RouterModule
   ],
   exports: [
     sharedExportDeclarations

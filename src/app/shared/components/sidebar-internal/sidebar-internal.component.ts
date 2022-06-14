@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ISidebarNav } from '../../modules/sidebar-nav/SidebarNav';
+import { ISidebarNav } from '../../models/sidebar-nav/SidebarNav';
 
 @Component({
   selector: 'app-sidebar-internal',
@@ -12,13 +12,15 @@ export class SidebarInternalComponent implements OnInit {
   routerRecruiterNav: ISidebarNav[] = [
     {
       name: 'Cadastro de vagas',
-      router: '/'
+      router: '/',
+      icon: ''
     }
   ]
   routerStudentNav: ISidebarNav[] = [
     {
-      name: 'Perfil',
-      router: 'user/perfil'
+      name: 'Curriculo',
+      router: 'student',
+      icon: 'description'
     }
   ]
   sideNav: ISidebarNav[] = []

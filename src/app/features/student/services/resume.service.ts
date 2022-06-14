@@ -18,6 +18,11 @@ export class ResumeService {
   ) { }
 
   public getResume(): Observable<IResume> {
+    return this.HTTP.get<IResume>(`${this.API}/resume`)
+      .pipe(take(1),tap((response: IResume) => response));
+  }
+
+  public editResume(): Observable<IResume> {
     return this.HTTP.get<IResume>(`${this.API}/resume/register`)
       .pipe(take(1),tap((response: IResume) => response));
   }

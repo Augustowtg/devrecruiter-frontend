@@ -76,6 +76,7 @@ $blue-palette: (
   )
 );
 
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -111,4 +112,9 @@ ul li {
 
 mat-divider {
   background-color: #0071BD;
+}
+
+mat-icon {
+  color: #0071BD;
+  vertical-align: middle;
 }

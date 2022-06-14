@@ -1,3 +1,22 @@
-<ul>
-    <li *ngFor="let listItem of sideNav"><a [href]="listItem?.router">{{ listItem?.name }}</a></li>
-</ul>
+<div class="w-100">
+    <ul class="px-0">
+        <mat-divider></mat-divider>
+        <li *ngFor="let listItem of sideNav">
+            <button class="w-100 text-start" mat-button color="primary" [routerLink]="listItem?.router">
+                <mat-icon>{{ listItem?.icon }}</mat-icon> {{ listItem?.name }}
+            </button>
+            <mat-divider></mat-divider>
+        </li>
+        <li>
+            <button class="w-100 text-start" mat-button color="primary" routerLink="/user/perfil">
+                <mat-icon>person</mat-icon> Perfil
+            </button>
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+            <button class="w-100 text-start" mat-button color="primary" routerLink="#">
+                <mat-icon>logout</mat-icon> Sair
+            </button>
+        </li>
+    </ul>
+</div>

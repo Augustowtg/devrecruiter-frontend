@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { IResume } from '../../models/resume.model';
+import { ResumeService } from '../../services/resume.service';
+
 @Component({
   selector: 'app-student-resume',
   templateUrl: './student-resume.component.html',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentResumeComponent implements OnInit {
 
-  constructor() { }
+  resume: any
+  constructor(
+    private resumeService: ResumeService,
+  ) { }
 
   ngOnInit(): void {
+    this.resumeService.getResume().subscribe((response: IResume) => {
+      this.resume = response
+    })
   }
 
 }
