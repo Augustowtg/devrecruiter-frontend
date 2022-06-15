@@ -18,6 +18,14 @@ const routes: Routes = [
           import('../user/user.module').then((m) => m.UserModule),
       },
       {
+        path: 'Student',
+        redirectTo: 'student'
+      },
+      {
+        path: 'Recruiter',
+        redirectTo: 'recruiter'
+      },
+      {
         path: 'student',
         canActivate: [StudentGuard],
         loadChildren: () =>

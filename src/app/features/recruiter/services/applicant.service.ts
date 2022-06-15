@@ -16,8 +16,8 @@ export class ApplicantService {
     private HTTP: HttpClient
   ) { }
   
-  private getApplicant(): Observable<any[]> {
-    return this.HTTP.get<any[]>(`${this.API}/resume/register`)
+  public getApplicant(): Observable<any[]> {
+    return this.HTTP.get<any[]>(`${this.API}/resume/list`)
     .pipe(take(1),tap((response: any[]) => response))
   }
 }

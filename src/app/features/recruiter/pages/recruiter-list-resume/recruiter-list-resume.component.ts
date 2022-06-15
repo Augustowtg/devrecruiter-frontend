@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IResume } from 'src/app/features/student/models/resume.model';
+import { ApplicantService } from '../../services/applicant.service';
 
 @Component({
   selector: 'app-recruiter-list-resume',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecruiterListResumeComponent implements OnInit {
 
-  constructor() { }
+  resumeList: IResume[] = []
+
+  constructor(
+    private applicantService: ApplicantService
+  ) { }
 
   ngOnInit(): void {
+    this.applicantService.getApplicant().subscribe(
+      (response: any) => {
+        this.resumeList = response.message
+      }
+    )
   }
 
 }
