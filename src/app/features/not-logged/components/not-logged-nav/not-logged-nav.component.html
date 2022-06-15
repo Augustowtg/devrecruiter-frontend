@@ -1,7 +1,10 @@
 <mat-toolbar color="primary">
     <div class="container d-flex justify-content-between align-items-center">
         <div>
-            <span>devRecruiter</span>
+            <figure>
+                <img src="../../../../../assets/logo/logo-devrecruiter.jpg" alt="Logo DevRecruiter">
+                <figcaption>Logo DevRecruiter</figcaption>
+            </figure>
         </div>
         <ul class="d-flex pt-3">
             <li *ngFor="let item of menuItems" class="mx-2"><a [href]="item.href">{{item.label}}</a></li>

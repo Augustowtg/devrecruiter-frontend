@@ -89,6 +89,8 @@ export class RegisterComponent {
         this.router.navigate(['/auth/login']);
       },
       (err) => {
+        this.submitted = false;
+        alert('Error login session: ' + err)
         console.log('Register user error: ' + err);
       }
     );

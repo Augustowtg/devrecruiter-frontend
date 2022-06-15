@@ -54,6 +54,8 @@ export class LoginComponent {
         this.authService.userSession(response);
       },
       (err) => {
+        this.submitted = false;
+        alert('Error login session: ' + err)
         console.log('Error login session: ' + err);
       }
     );
