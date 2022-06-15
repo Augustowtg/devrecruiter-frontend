@@ -1,22 +1,16 @@
 <section class="container">
     <section>
-        <div class="text-center"><h4 class="mat-subheading-1">Nome: Augusto Wesley</h4></div>
+        <div>
+            <h4 class="mat-title primary">Nome: {{ resume.name }}</h4>
+        </div>
         <section>
-            <h4>Caracteristicas</h4>
+            <h4>Curriculo</h4>
             <ul>
-                <li>Caracteristica: 1</li>
-                <li>Caracteristica: 2</li>
-                <li>Caracteristica: 3</li>
-                <li>Caracteristica: 4</li>
-            </ul>
-        </section>
-        <section>
-            <h4>Habilidades</h4>
-            <ul>
-                <li>Habilidades: 1</li>
-                <li>Habilidades: 2</li>
-                <li>Habilidades: 3</li>
-                <li>Habilidades: 4</li>
+                <li>Nome: {{ resume.name }}</li>
+                <li>Descrição {{ resume.description }}</li>
+                <li>HardSkill: {{ resume.HardSkill }}</li>
+                <li>SoftSkill: {{ resume.SoftSkill }}</li>
+                <li>Contato: {{ resume.contact }}</li>
             </ul>
         </section>
     </section>

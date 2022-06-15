@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
-import { IResume } from '../../models/resume.model'; 
+import { IResume } from '../../models/resume.model';
 import { ResumeService } from '../../services/resume.service';
 
 @Component({
@@ -38,6 +38,10 @@ export class StudentRegisterResumeComponent {
       escolaridade: this.resumeForm.get('escolaridade')?.value,
     };
 
-    this.resumeService.RegisterResume(resume).subscribe((response) => console.log(response))
+    this.resumeService.RegisterResume(resume).subscribe(
+      (response: any) => {
+        let resume = response.message
+        localStorage.setItem('resume_id_student', resume.id)
+      })
   }
 }

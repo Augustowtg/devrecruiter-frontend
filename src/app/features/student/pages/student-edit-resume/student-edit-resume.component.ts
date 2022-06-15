@@ -12,6 +12,7 @@ import { ResumeService } from '../../services/resume.service';
 export class StudentEditResumeComponent implements OnInit {
 
   resume: any;
+  resumeId = String(localStorage.getItem('resume_id_student'))
 
   constructor(
     private resumeService: ResumeService,
@@ -19,7 +20,7 @@ export class StudentEditResumeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.resumeService.getResume().subscribe((response: IResume) => {
+    this.resumeService.getResume(this.resumeId).subscribe((response: IResume) => {
       this.resume = response
     })
   }

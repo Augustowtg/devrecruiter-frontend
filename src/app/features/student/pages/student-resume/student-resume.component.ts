@@ -10,14 +10,24 @@ import { ResumeService } from '../../services/resume.service';
 })
 export class StudentResumeComponent implements OnInit {
 
-  resume: any
+  resume: IResume = {
+    contact: '',
+    description: '',
+    escolaridade: '',
+    HardSkill: '',
+    name: '',
+    SoftSkill: ''
+  }
+  resumeId = String(localStorage.getItem('resume_id_student'))
+
   constructor(
     private resumeService: ResumeService,
   ) { }
 
   ngOnInit(): void {
-    this.resumeService.getResume().subscribe((response: IResume) => {
-      this.resume = response
+
+    this.resumeService.getResume(this.resumeId).subscribe((response: any) => {
+      this.resume = response.message
     })
   }
 

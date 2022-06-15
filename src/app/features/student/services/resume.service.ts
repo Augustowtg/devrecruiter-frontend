@@ -17,8 +17,8 @@ export class ResumeService {
     private HTTP: HttpClient
   ) { }
 
-  public getResume(): Observable<IResume> {
-    return this.HTTP.get<IResume>(`${this.API}/resume`)
+  public getResume(id: string): Observable<IResume> {
+    return this.HTTP.get<IResume>(`${this.API}/resume/${id}`)
       .pipe(take(1),tap((response: IResume) => response));
   }
 
