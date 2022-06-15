@@ -15,10 +15,13 @@ export class AuthenticatedComponent implements OnInit {
 
   ngOnInit(): void {
     const roles = this.authService.isStudent();
-    if(roles === false) {
+    console.log(roles)
+    if (roles === false) {
       this.role = 'Recruiter'
     }
-    this.role = 'Student'
+    else {
+      this.role = 'Student'
+    }
   }
 
 }

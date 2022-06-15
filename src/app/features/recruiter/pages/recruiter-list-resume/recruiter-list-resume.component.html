@@ -1,11 +1,13 @@
 <section class="d-flex justify-content-arround flex-wrap">
-    <div *ngFor="let resume of resumeList">
-        <ul>
-            <li>Nome: {{ resume.name }}</li>
-            <li>Descrição {{ resume.description }}</li>
-            <li>HardSkill: {{ resume.HardSkill }}</li>
-            <li>SoftSkill: {{ resume.SoftSkill }}</li>
-            <li>Contato: {{ resume.contact }}</li>
-        </ul>
+    <div class="m-4" *ngFor="let resume of resumeList">
+        <div class="p-4 border">
+            <ul class="px-0">
+                <li>Nome: {{ resume.name }}</li>
+                <li>Descrição {{ resume.description }}</li>
+                <li>HardSkill: {{ resume.HardSkill }}</li>
+                <li>SoftSkill: {{ resume.SoftSkill }}</li>
+                <li>Contato: {{ resume.contact }}</li>
+            </ul>
+        </div>
     </div>
 </section>
