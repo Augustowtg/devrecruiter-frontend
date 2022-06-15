@@ -1,15 +1,19 @@
 a {
     text-decoration: none;
+    color: #0071BD;
+    border: 2px solid transparent;
+    transition: border-color 0.7;
 }
-a {
+a:hover {
+    border-bottom-color: #0071BD;
     text-decoration: none;
-    color: white;
+    color: #0071BD;
 }
 .button-responsive {
     display: none
 }
 mat-toolbar {
-    background-color: #0071BD;
+    background-color: white;
 }
 @media (max-width: 573px) {
     .button-responsive {
@@ -19,4 +23,8 @@ mat-toolbar {
     .menu-responsive {
         display: none
     }
+}
+
+.brand-log {
+    width: 100px;
 }

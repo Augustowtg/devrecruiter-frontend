@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 import { ISidebarNav } from '../../models/sidebar-nav/SidebarNav';
 
 @Component({
@@ -24,7 +26,9 @@ export class SidebarInternalComponent implements OnInit {
     }
   ]
   sideNav: ISidebarNav[] = []
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
     if(this.role === 'recruiter') {
@@ -33,4 +37,7 @@ export class SidebarInternalComponent implements OnInit {
     this.sideNav = this.routerStudentNav
   }
 
+  public logout(): void {
+    this.authService.logoutUser()
+  }
 }
